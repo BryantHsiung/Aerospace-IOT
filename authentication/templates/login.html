@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Adding CSS -->
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login</h2>
+    {% if error_message %}
+    <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="submit">Login</button>
+
+        <!-- A Forgot Password link -->
+        <a href="{% url 'password_reset' %}">Forgot Password?</a>
+        <a href="/register/" class="button">No account?</a>
+    </form>
+    <a href="/home/" class="button">Go back to Homepage</a>
+</body>
+</html>

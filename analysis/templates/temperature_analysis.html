@@ -1,0 +1,70 @@
+<!-- temperature_analysis.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Analysis</title>
+    <style>
+        /* Add some spacing between the data table and analysis */
+        .data-table {
+            margin-bottom: 20px;
+        }
+
+        .analysis-results {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Temperature Analysis</h1>
+
+    <!-- Data Table -->
+    <div class="data-table">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Month</th>
+                    <th>Day</th>
+                    <th>Hour</th>
+                    <th>Minute</th>
+                    <th>Second</th>
+                    <th>Internal Temperature</th>
+                    <th>Temperature</th>
+                    <th>Humidity</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in data.itertuples %}
+                    <tr>
+                        <td>{{ entry.Year }}</td>
+                        <td>{{ entry.Month }}</td>
+                        <td>{{ entry.Day }}</td>
+                        <td>{{ entry.Hour }}</td>
+                        <td>{{ entry.Minute }}</td>
+                        <td>{{ entry.Second }}</td>
+                        <td>{{ entry.Internal }}</td>
+                        <td>{{ entry.Temperature }}</td>
+                        <td>{{ entry.Humidity }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Analysis Results -->
+    <div class="analysis-results">
+        <!-- Display the analysis results as HTML -->
+        {{ analysis_html|safe }}
+    </div>
+
+    <div class="plots">
+        <img src = "{% static 'temperature_plot.jpeg' %}" alt = "Temperature Plot">
+        <img src = "{% static 'humidity_plot.jpeg' %}" alt = "Humidity Plot">
+    </div>
+
+</body>
+</html>

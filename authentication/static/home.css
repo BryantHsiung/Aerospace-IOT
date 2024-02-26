@@ -1,0 +1,103 @@
+/* Reset some default browser styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #13294B;
+    color: #FF5F05;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+.Menu{
+    margin-bottom: 20px;
+}
+.Menu h2{
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #FF5F05;
+}
+
+p {
+    font-size: 1rem;
+    color: #13294B;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    header {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Add this to your home.css file */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: #fff; /* White text */
+    background-color: #007bff; /* Blue background 007bff*/
+    border: 2px solid transparent; /* Add border */
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Drop shadow for depth */
+}
+
+.button:hover, .button:focus {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: #ffdead; /* Light peach text on hover, optional */
+    border: 2px solid #ffdead; /* Add a border color change on hover */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* Increased shadow on hover for depth */
+    transform: translateY(-2px); /* Slightly raise the button on hover */
+}
+
+/* For accessibility, ensure that focus styles are also distinguishable */
+.button:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #ffdead; /* Same as hover state */
+    box-shadow: 0 0 0 2px #007bff; /* Blue glow effect */
+}
+
+hr {
+    border: none;
+    height: 3px;
+    /* Set the hr color */
+    color: #FF5F05;  /* old IE */
+    background-color: #FF5F05;  /* Modern Browsers */
+  }
+
