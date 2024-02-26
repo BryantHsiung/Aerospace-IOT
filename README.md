@@ -1,4 +1,4 @@
-# group-project-readme
+# Aerospace IOT
 
 ## Introduction:
 The Aerospace IOT created throughout this project is a special sensor made using an embedded system that is capable of obtaining accurate atmospheric data in real-time, such as internal temperature, temperature, humidity, and run time. The obtained data is sent to the web app that handles data collection and data scientific analysis for scientific research.
